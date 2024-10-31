@@ -18,12 +18,14 @@ document.getElementById('fixed-word').addEventListener('click', () => {
 
         // Set the initial position of the word
         wordElement.style.transform = `translate(${startX}px, ${startY}px)`; 
+        wordElement.style.opacity = '1'; // Set initial opacity to 1 for the pop effect
         document.getElementById('content').appendChild(wordElement);
 
         // Trigger the animation after a brief delay
         setTimeout(() => {
-            wordElement.style.transform = `translate(${window.innerWidth / 2}px, ${window.innerHeight / 2 - 200}px)`; // Pop towards the center
-            wordElement.style.opacity = '1'; // Fade in
+            // Pop towards the center while rising
+            wordElement.style.transform = `translate(${window.innerWidth / 2}px, ${window.innerHeight / 2 - 200}px)`; 
+            wordElement.style.opacity = '0'; // Fade out
         }, 10);
 
         // Remove the word element after the animation completes
