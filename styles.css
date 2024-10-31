@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Prevents overflow due to rising words */
+}
+
+#fixed-word {
+    font-size: 48px;
+    font-weight: bold;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Ensures it's on top of other elements */
+}
+
+.word {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
