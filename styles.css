@@ -4,10 +4,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     margin: 0;
     background-color: #f0f0f0;
-    overflow: hidden; /* Prevents overflow due to rising words */
+    overflow: hidden; /* Prevents overflow */
 }
 
 #fixed-word {
@@ -24,5 +24,5 @@ body {
     position: absolute;
     font-size: 24px;
     opacity: 0;
-    transition: transform 1s ease, opacity 1s ease;
+    transition: transform 0.8s ease, opacity 0.8s ease;
 }
